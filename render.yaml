@@ -1,4 +1,5 @@
 # Blueprint de Render - plan FREE (solo pruebas).
+# Servicio Baileys (sin navegador) -> ligero, entra en 512 MB.
 # Sin disco persistente: si el servicio se reinicia/duerme, hay que
 # volver a escanear el QR en /qr.
 services:
@@ -11,5 +12,3 @@ services:
     envVars:
       - key: SITE_BASE_URL
         value: https://bibliotecaiemr.infy.click
-      - key: PUPPETEER_EXECUTABLE_PATH
-        value: /usr/bin/chromium
