@@ -6,7 +6,7 @@ on:
   workflow_dispatch: {}
 
 env:
-  RENDER_URL: 'https://TU-SERVICIO.onrender.com/health'
+  RENDER_URL: 'https://biblioteca-whatsapp.onrender.com/health'
   SITE_URL: 'https://bibliotecaiemr.infy.click/'
 
 jobs:
