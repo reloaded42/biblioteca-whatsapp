@@ -1,0 +1,22 @@
+name: keep-alive
+
+on:
+  schedule:
+    - cron: '*/10 * * * *'
+  workflow_dispatch: {}
+
+env:
+  RENDER_URL: 'https://TU-SERVICIO.onrender.com/health'
+  SITE_URL: 'https://bibliotecaiemr.infy.click/'
+
+jobs:
+  ping:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Ping a los sitios
+        run: |
+          set +e
+          for u in "$RENDER_URL" "$SITE_URL"; do
+            echo "== Ping $u"
+            curl -sS -L --max-time 90 -o /dev/null -w "-> HTTP %{http_code} en %{time_total}s\n" "$u"
+          done
