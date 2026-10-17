@@ -1,0 +1,17 @@
+{
+  "name": "biblioteca-whatsapp",
+  "version": "1.0.0",
+  "private": true,
+  "description": "Servicio que envia los codigos OTP de la biblioteca por WhatsApp (whatsapp-web.js) - despliegue en Render.",
+  "engines": {
+    "node": ">=18"
+  },
+  "scripts": {
+    "start": "node index.js"
+  },
+  "dependencies": {
+    "qrcode": "^1.5.4",
+    "qrcode-terminal": "^0.12.0",
+    "whatsapp-web.js": "^1.26.0"
+  }
+}
